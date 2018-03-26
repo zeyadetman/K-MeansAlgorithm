@@ -90,7 +90,7 @@ vector<vector<float> > randomClus(int numofclus, vector < vector<float> > dataFl
 	vector<vector<float> > Kvec;
 	for (int i = 0; i < numofclus; i++)
 	{
-		Kvec.push_back(dataFloat[rand()%150]); // generate random int from 0 to 149
+		Kvec.push_back(dataFloat[rand() % dataFloat.size()]); // generate random int from 0 to 149
 	}
 	return Kvec;
 }
@@ -105,7 +105,7 @@ vector<vector<float> > parRandomClus(int numofclus, vector < vector<float> > dat
 	#pragma omp for private(id) ordered
 		for (int i = 0; i < numofclus; i++)
 		{
-			Kvec.push_back(dataFloat[rand() % 150]); // generate random int from 0 to 149
+			Kvec.push_back(dataFloat[rand() % dataFloat.size()]); // generate random int from 0 to 149
 		}
 	
 	return Kvec;
