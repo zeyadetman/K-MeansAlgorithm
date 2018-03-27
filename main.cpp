@@ -404,7 +404,7 @@ int main()
 	const string outputFilePath = "IrisDataset_cluster_centres.txt"; //path of the output file, you can change it from here once
 
 	int choice;
-	cout << "1. Sequential K-means algorithm\n2. Parallel K - Means using OMP\n\n	Your Choice: ";
+	cout << "1. Sequential K-means algorithm\n2. Parallel K - Means using OMP\n\n\n	Your Choice: ";
 	cin >> choice;
 
 	choice == 1 ? seqKmeans(outputFilePath, filePath, threshold) : choice == 2 ? parKmeans(outputFilePath, filePath, threshold) : printf("\n\nYou selected wrong choice ");
